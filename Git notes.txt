@@ -1,0 +1,792 @@
+
+18/11/2022
+Notes
+===================================================
+impoetant key points about Github
+*******************
+https:// github.com/nishadaaruhi360/repo-name.git
+
+
+Important information Reated to git repo
+*******************************************
+1. Every git repo has its permission
+2. every git repo will have readm file 
+3. every git repo has visibility status
+
+1.  Public repo: any body can see ,and any body can
+               download(clone-> origin)
+                   or any body can fork(clone-> upstream), and body can watch.
+
+2. private 
+
+4. every git repo may have or may not have not license.
+5. every  Repo will have its own owner and its own branch  by default brannch name is master 
+and aftery august -2021 master name was change to main in github.
+
+===========================================
+dff git clone and git forck
+******************************
+
+git clone  code cloud to local download
+private and public repo
+
+git fork code one gothub account -------> 2nd git  account -->
+download
+19/11/2022
+
+public repo.
+ How to instialise a variable in c :-
+***************************************
+int a=20;
+
+printf(a ="%d,a);                            =>value print a
+
+a variable
+
+samilarty,
+ begore you can use, any repo(private or public)nit has to be intialised.
+
+intialisation in github
+******************************************
+steps  are:
+1.     Repo name   ---->owner  -----------> master branch or main branch
+2.     Repo Description(optional)
+3.   visibility mode :  private or public                      watch,clone,fork
+$.    readmi. md
+5.       . gitignore
+6.    license             unlience
+
+
+ by specific branch  : bydefault main ----> change  -----------> master
+
+
+Intialisation in local
+**************************
+
+before  you commit(fanal save) owner information is mendatory.
+
+
+
+git will ask who are you before  commit
+**************************************************
+
+There  two way  of adding author information
+1.    local=>  multipal user   ----> local to the user
+2.  global=>  singal user  ------> globally.
+
+
+consider ,system
+
+ guset-1 local user
+ guset-2 local user
+admin local user
+
+if there is one user  then you have set author/ owner information glabally.   
+
+how to add show global author username and email
+*************************************************
+$  git  config  -- global user .name
+$ git  config  -- global user .email
+
+for locally
+************************
+$  git   config  -- local user .name
+$ git  config   -- local  user .email
+
+
+
+Notes:    if you supply the value, then set or if not it will show.
+ Note:    for string value if space seperated string then in command line" .." is mendatory
+
+Every space wala sentance should be inside "... " key andergit
+
+
+Adding Author/ owner information globally
+*****************************
+$  git   config  -- global user .name"aaruhi nishad"
+$ git  config   -- global  user .email " nishadpriyanka993@gmail.com"
+
+
+Adding Author/owner information local
+****************************************
+$  git   config  -- local user .name "aaruhi nishad"
+$ git  config   -- local  user .email  "nishas pri@email.com"
+
+
+if Already Added,author information  then we will remove it 
+windows =>credential manager
+1..   web credential manager
+2..     windows credential
+All sever based credential (userId+ Password) will be  store
+here only.
+
+How to creat workspace in git
+*******************************************
+what is workspace?
+  work-space : is a folder where ,all your code is kept ,and you are cuuret  working. 
+(cwd)  : current working direct0ry
+cwd is only called workspace.
+
+ $ mkdir foldername
+$ cd foldername
+$ pwd ->path/to/cwd
+$   ls -lart
+or 
+$   ls
+ 
+rm -r.git
+cd ..    file remove
++
+
+
+How to intialise git at local
+*******************************
+$ git init
+
+
+Hoe to see git branch name at local
+****************************
+$ git config  --list --show -origin
+0r
+$ git config --list
+                            | 
+                             options or flag  s or conditions or arguments
+
+--show -origin: full path show
+
+
+How to chane ,the init .defaultbranch name from master to mai
+*******************************************************
+1.  linux or terminal
+
+cmd => lounch => administrator
+change the permission using command
+chmod 777 path/ to/folder
+
+
+windows:-
+ powershell or cmd  => lounch=> administrater run 
+cd etc
+ chmod 77 path /to/ folder
+ when ,r+w+x+   permission
+ properties> security> permission>edit> allow permission
+full accesss  [tick]
+
+
+execute [tick]
+write[tick]
+
+apply  > ok  >ok
+
+chmod  777 path/to/folder
+$ git config --system init.defaultbranch "main"
+
+  Note  ::   git init is done when you are sure that you are going to create some files
+
+
+Ask two main qus  with yourself
+********************************************
+
+1. Is this my  correct cmd  ?
+if not then run cd command and move to correct,
+
+2.     make sure you have  few files.
+Note ::    no commit will be allowed without any file.
+
+ How to create empty files
+***********************
+$ touch index.html
+
+
+write some code...
+How to traching of files
+*******************************
+or
+How to add files to stage
+********************************
+$ git add filename
+
+for entire  folder
+******************************
+$ git add  .
+
+
+How to check tracking
+**************************************
+$ git status
+Note::   you can run  git status at any mode, any situation any, way and any time
+
+
+$  git init
+Note::    you have to git init ,for first time, you to covert
+cmd=> myproject( workspace)=> main repository
+
+Note:: local git repo
+
+ Details about .git folder
+***************************
+it is main hidden folder
+$  ls
+$ cd .git
+$ git branch
+
+Note::    branch ,is concept which is created when multipal users are working together.
+
+
+
+How to see branch list
+****************************
+
+$ git branch
+dev
+ master or main
+(*)   tester  <----------------------------- current branch name
+design
+
+ Note :: $ ------------------------>( main)  current branch  name
+
+
+branch of  two types
+***********************
+1.   local : $  git branch
+2.   origin (github or cloud)  : $ git branch   --all
+
+
+How to  the local  branch  look  like
+******************************
+
+dev 
+master or main
+(*) tester <------------------------------- current branch name
+design
+
+---------------------------- output-------------------------------
+dev 
+master
+(*)tester <------------------------------ current branch name
+design
+refs/remotes/origin/main
+refs/remotes/origin/design
+refs/remotes/origin/tester
+refs/remotes/origin/dev
+refs/remotes/origin/release
+refs/remotes/origin/manager
+refs/remotes/origin/manager
+----------------------------------output-----------------------------------------
+
+Note :: branch connot be created until first commit or first  pull or clone
+
+ First commit :- saving from local to local  .git  repository
+file   |   ----------------------> stage  ----------------> final commit   | .git repo.
+
+As soon as, Automatically,   commit your recent commit will become HEAD of that branch.
+
+
+for first commit file should be at ,stage
+**********************************
+$ git add filename
+
+or
+$ git add
+
+How to any file to cach memory or unstage
+***************************************
+$ rm -r filename or foldername or foldername
+$git rm --cached  <filename>:
+unstage  => No tracking
+
+
+How to track the modified
+************************************
+$git status
+s : status
+s: stage
+
+
+Note::     once you are sure and you are dene with  your task,
+
+How to commit
+*************************
+After modified stage you have two optionas
+
+1.  unstage
+2. commit
+
+$git commit  -m "Added,changes in index and about file"
+ this message will br commit message
+  you will get, commit Id  : 40bit
+
+
+once commit
+
+1. Head is generate
+2. commit Id is   generated
+3.  file will automatically
+unstage  ---> unstracked mode
+
+
+During commit 
+************************************
+ versioning happens
+
+
+what happens during  versionning
+***********************
+
+
+table : date  and time
+
+ autore information
+ commit Id , message also code
+
+
+Add[+] insertions  : green
+del [-] deletion  :red
+ NC[0]  unchanged  : default white
+
+                         NC  => No,changes
+
+$  Nothing  to commit working tree  clean.
+
+
+How to see commit
+********************************
+$ git log
+commit  Id
+ Head information :
+Autor Information :
+
+log end : q 
+
+or  ctrl  +c
+
+ How to see   code of commit-
+*******************************
+git diff <branchname>
+
+or
+
+$ git  diff< commitID>
+ if branch same you want to  code of any  other commit you will be in detach  mode
+
+
+
+
+
+new branch for  older commit created=>
+ detached HEAD Breanch
+
+
+ How to   create branch
+**************************
+$ git  branch  <branchname>
+ How to move  one branch to another branch
+*************************************
+ $ git  checkout branchname
+
+or
+$ git checkout commitID
+
+
+How to delete branch
+******************************
+
+
+Note::    deleting the branch will delete all commit.
+and impossible to undo.
+
+$ git branch -- delete  <branchname>
+
+  How to final ckechout
+********************************
+$ git ckechout  < commit or  branchname>
+
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+git repositry
+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
+
+
+
+25/11/2022
+====================================
+what  happenns in ssh( putty)  ?
+
+1.     connection is set up B/s direction client to sever using shell or terminal 
+There are two ways of  connection  sever using ssh
+
+************************************************
+
+
+1. using creating ,hosting (IP)  .port
+
+
+1.  hosting of IP : cmd  => ping url without  https/http
+ for eg  : cmd => ping google .com
+for eg  : cmd  :=>  ping facebook.com
+ for eg: cmd=> ping gmail.com
+or
+
+ https: //dnslookup.online
+
+dns lookup
+dns checker
+mxtoolbox
+all information related to sever and IP can be found using above  website  which will include ,dns  record ,dns sever, network sever, hosting sever, namesever..........etc.
+2. by  -   default port  :
+ftp protocol  :21
+ sftp protocal  :22
+
+Note  :: if  port not provided, you have  to default port for publice sever
+
+Note  :: if network is private ,then there amy a chance that sever may use ther own port number
+for connection ,ypu must connect to private port.
+public  smtp  sever  :25
+
+
+private sever  :   2096  < private port>
+
+
+ protocol  =>  port assing   => IANA
+private port will be given sever admin.
+
+3.  username :    access from sever admin.
+4.password   :   access from sever admin.
+
+
+
+2nd method :-
+******************************************
+1.   using ssh key
+           1.public    : automatically  exchange  b/w cliet and sever
+             2. private   :   username  and password (private key)
+      Installl   ---> putty  ---------> open puttygen
+generate   token
+
+          --------------->  shake mouse cursor.                 
+                     ----->  shaking (algorithm)+ machine(macId)  => 
+1.public   => rsa
+2. private  => rsa
+
+ client shell<-------------------------------------------------------------------------------> Sever shell
+[data]-----------------------------------------> send--------------------------------------. [tanget]
+----------------------------------------------> Encrypt --------------------------------------> public key
+<--------------------------------------------pravate key-------------------------------------
+ How to add ssh key to git repo
+*********************************
+1.   avator icon  > setting  > under repository  > development
+
+ssh keys   => Add ssh key and Add your public-rsa key add.
+
+
+
+2. Token :-
+*********************************************
+if you generate, peronalised token then instead of adding username and password (private key)
+ you can one time add, token and it will be saved for  30 days and you can directly commit to the sever
+
+ if you save this token it will stored in , creadential manager.
+
+ How to  set token
+*************************
+1, github  > avator icon  > setting  > drvrloper setting  > personaliesd token  > classic token  < generate token
+
+1.    title
+2    expire
+
+               7 days
+              30 dats
+             90 days
+
+Note  ::    This  expire is by -default   30 days 
+after that it expires most companies ,are going to set expire according to there sprint
+
+
+
+set all the permission
+1. shh key
+2. read write, commit, deployement ,allow sharing, ..... branch creation
+
+
+generate 
+1.   please pleas please copy at once becouse this token will be hidden as soon as you  refresh ,hence keep it very delete and regenerate
+
+
+ How to push code to sever or origin
+***************************************
+  1. nornal push
+2.  force push
+
+
+
+  How to nornally push  the code
+**********************************
+$ you to commit and you to check out  to the  branch for push
+$ git commit -m "something"
+$ git checkout to branch 
+$  git push origin   <branch>
+
+
+
+How to normally push the code
+*******************************
+$ git push  -f  origin   <branch-name>
+eg ---
+
+$ git branch
+1. dev
+2. master
+3. tester
+ 
+ if tester   push
+************************
+$git push -f origin tester
+
+
+ if master push
+**********************
+$ git push  -f origin master
+
+if dev push
+*********************
+ $ git push   -f origin dev.
+
+ before push your  origin must br ready
+******************************
+origin  => url
+ system client
+connection
+secver (remotly)
+$ git remote  -v
+1.  mode pusk
+2. fetch
+
+
+
+ How to set up origin 
+********************************
+
+
+
+$ git remote add   origin <repo-url>
+ to remove
+  $ git remote remove origin
+
+
+Again chech remote or origin   version
+***************************************
+$ git remote  -v
+
+
+https://github.com/ aaruhinishad/techpile-demo.git
+or
+https://github.com/ aaruhinishad/techpile-demo.git
+
+sir------------------------------ 
+https:// github.com/Evilshze/git-notes-by-awnishkumar.git
+ https://github.com/awnishmmg/php-documention
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
